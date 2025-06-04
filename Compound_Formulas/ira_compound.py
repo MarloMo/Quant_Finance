@@ -5,15 +5,15 @@ import compound_funcs as cf
 ##################################
 ##### Adjustable Variables ######
 ##################################
-P = 5000  # Principal amount
-r = 0.12  # APY (Annual Percentage Yield)
-age = 22  # Current Age
-retirement_age = 65  # Potential Retirement Age
-yearly_contributions = 580 * 12  # Annual Contributions
-retirement_output_rate = 0.05  # Rate of Annual Withdrawal During Retirement Years
+P = 58000  # Principal amount
+r = 10 / 100  # APY (Annual Percentage Yield)
+age = 35  # Current Age
+retirement_age = 36  # Potential Retirement Age
+yearly_contributions = 0 * 12  # Annual Contributions
+retirement_output_rate = 0.04  # Rate of Annual Withdrawal During Retirement Years
 ##################################
 ##### Adjustable Constraints ######
-annual_limit = 7000  # IRA Annual Contribution Limit (2025)
+annual_limit = 8000  # IRA Annual Contribution Limit (2025)
 ##################################
 ##################################
 ##################################
@@ -54,7 +54,8 @@ plt.ylabel("Total Savings ($)")
 plt.text(
     0.5,  # x-coordinate (fraction of x-axis range)
     -0.30,  # y-coordinate (fraction of y-axis range)
-    f"Annual Contributions: ${yearly_contributions:,.2f}/yr \n"
+    f"Principle: ${P:,.2f}/yr \n"
+    f"Annual Contributions: ${yearly_contributions:,.2f} \n"
     f"Total years lapsed: {target_time} yrs \n"
     f"Annual Payout: ~ ${annual_payout:,.2f} \n"
     f"Monthly Payout: ~ ${monthly_payout:,.2f}",
